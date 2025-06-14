@@ -1,0 +1,46 @@
+
+
+*Fichier : `index.html`*
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Alliz Shop</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+    .product { background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+    .btn { padding: 8px 15px; background: green; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Alliz Shop</h1>
+  <div class="product">
+    <h2>Produit 1</h2>
+    <p>Prix : 1000 FCFA</p>
+    <button class="btn" onclick="ajouter(1000)">Ajouter au panier</button>
+  </div>
+  <div class="product">
+    <h2>Produit 2</h2>
+    <p>Prix : 2000 FCFA</p>
+    <button class="btn" onclick="ajouter(2000)">Ajouter au panier</button>
+  </div>
+
+  <h3>Total : <span id="total">0</span> FCFA</h3>
+  <h3>Votre bénéfice (10%) : <span id="benefice">0</span> FCFA</h3>
+  <button class="btn" onclick="payer()">Simuler Paiement Airtel</button>
+
+  <script>
+    let total = 0;
+    function ajouter(prix) {
+      total += prix;
+      document.getElementById('total').textContent = total;document.getElementById('benefice').textContent = Math.floor(total * 0.1);
+    }
+    function payer() {
+      alert("Paiement Airtel simulé. Total : " + total + " FCFA. Bénéfice : " + Math.floor(total * 0.1) + " FCFA.");
+    }
+  </script>
+</body>
+</html>
+``` 
