@@ -1,0 +1,23 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paiement Airtel - Alliz Shop</title>
+</head>
+<body>
+  <h2>Paiement Airtel Money</h2>
+  <form action="airtel_process.php" method="post">
+    <label>Numéro Airtel :</label><br>
+    <input type="text" name="phone" required><br><br>
+    
+    <label>Montant () :</label><br>
+    <input type="number" name="amount" required><br><br>
+
+    <button type="submit">Payer</button>
+  </form>
+</body>
+</html>
+“`
